@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4eujyjsec5dn"]
+
+[ext_resource type="Script" uid="uid://b37ogsl238dbh" path="res://Scenes/PoliceReports/police_reports.gd" id="1_ie4gt"]
+[ext_resource type="Texture2D" uid="uid://cudp6hm4ijt8x" path="res://Assets/Police Reports/ComputerScreenBackground.webp" id="2_3bijo"]
+[ext_resource type="PackedScene" uid="uid://desjhjsh24wj" path="res://Scenes/PoliceReports/home_screen.tscn" id="2_xcwa8"]
+[ext_resource type="Script" uid="uid://dxx23dhgixkse" path="res://Scenes/PoliceReports/displayed_page.gd" id="4_xcwa8"]
+[ext_resource type="PackedScene" uid="uid://c8oubuw5wxxh4" path="res://Scenes/PoliceReports/missing_persons_screen.tscn" id="5_rwtrp"]
+
+[node name="Police Reports" type="Node2D"]
+script = ExtResource("1_ie4gt")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(610, 367)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("2_3bijo")
+
+[node name="DisplayedScreen" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 0
+script = ExtResource("4_xcwa8")
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="DisplayedScreen"]
+layout_mode = 0
+offset_left = 267.0
+offset_top = 57.0
+offset_right = 950.0
+offset_bottom = 558.0
+color = Color(0.396889, 0.396889, 0.396889, 1)
+
+[node name="HomeScreen" parent="DisplayedScreen" instance=ExtResource("2_xcwa8")]
+offset_left = -10.0
+offset_top = 20.0
+offset_right = 30.0
+offset_bottom = 60.0
+
+[node name="MissingPersonsScreen" parent="DisplayedScreen" instance=ExtResource("5_rwtrp")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="DisplayedScreen/HomeScreen/HBoxContainer/CrimeScenesButton" to="DisplayedScreen" method="_on_crime_scenes_button_pressed"]
+[connection signal="pressed" from="DisplayedScreen/HomeScreen/HBoxContainer/ArrestsReportButton" to="DisplayedScreen" method="_on_arrests_report_button_pressed"]
+[connection signal="pressed" from="DisplayedScreen/HomeScreen/HBoxContainer/MissingsButton" to="DisplayedScreen" method="_on_missings_button_pressed"]
+[connection signal="pressed" from="DisplayedScreen/HomeScreen/SearchButton" to="DisplayedScreen" method="_on_search_button_pressed"]
+
+[editable path="DisplayedScreen/HomeScreen"]

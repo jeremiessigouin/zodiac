@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b6moauowmh0lp"]
+
+[node name="EvidenceButton" type="TextureButton"]
+custom_minimum_size = Vector2(120, 120)
+offset_right = 50.0
+offset_bottom = 51.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

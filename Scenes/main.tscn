@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://bplugw0aq6t53"]
+
+[ext_resource type="Script" uid="uid://bkmtsv8ddexe1" path="res://Scenes/main.gd" id="1_jjgbg"]
+[ext_resource type="Script" uid="uid://dx53odagkpxhp" path="res://Scenes/current_scene.gd" id="2_bo1nx"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_jjgbg")
+
+[node name="CurrentScene" type="Node2D" parent="."]
+script = ExtResource("2_bo1nx")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+offset_left = 322.0
+offset_top = 562.0
+offset_right = 418.0
+offset_bottom = 602.0
+
+[node name="NewspaperButton" type="Button" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+text = "Newspaper"
+
+[node name="PoliceReportsButton" type="Button" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+text = "Police Reports"
+
+[node name="BoardButton" type="Button" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+text = "Board"
+
+[node name="Button" type="Button" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+text = "Audio Tapes"
+
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/NewspaperButton" to="." method="_on_newspaper_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/PoliceReportsButton" to="." method="_on_police_reports_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/BoardButton" to="." method="_on_board_button_pressed"]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfp1scx2kd7qd"]
+
+[ext_resource type="Texture2D" uid="uid://2oxi1ubkfahf" path="res://Assets/LibraryHUB/library2.jpg" id="1_02r1i"]
+
+[node name="LibraryHUB" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(577.5, 324)
+scale = Vector2(1.64063, 1.68229)
+texture = ExtResource("1_02r1i")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ds3gf78gbbnmx"]
+
+[ext_resource type="PackedScene" uid="uid://dtryq13a8arut" path="res://Scenes/ClueBoard/VictimCards/victim_card.tscn" id="1_xn4ws"]
+[ext_resource type="Texture2D" uid="uid://c82jpn3qxtptb" path="res://Assets/Victims/StephanyRomy.jpg" id="2_600al"]
+
+[node name="StephanyRomyCard" instance=ExtResource("1_xn4ws")]
+
+[node name="Sprite2D" parent="." index="2"]
+scale = Vector2(0.2, 0.197)
+texture = ExtResource("2_600al")
+
+[node name="Label" parent="." index="3"]
+offset_left = -59.0
+offset_top = 50.0
+offset_right = 63.0
+offset_bottom = 73.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Stephany Romy"

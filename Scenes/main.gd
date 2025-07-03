@@ -1,0 +1,23 @@
+extends Node2D
+
+@onready var current_scene = $CurrentScene
+
+var newspaper_scene_path = "res://Scenes/Newspaper/newspaper.tscn"
+var board_scene_path = "res://Scenes/ClueBoard/clue_board.tscn"
+const POLICE_REPORTS_SCENE = "res://Scenes/PoliceReports/police_reports.tscn"
+const LIBRARY_HUB_SCENE = "res://Scenes/LibraryHUB/library_hub.tscn"
+
+
+func _ready():
+	current_scene.change_screen(LIBRARY_HUB_SCENE)
+	
+
+
+func _on_newspaper_button_pressed():
+	$CurrentScene.change_screen(newspaper_scene_path)
+
+func _on_board_button_pressed():
+	$CurrentScene.change_screen(board_scene_path)
+
+func _on_police_reports_button_pressed():
+	$CurrentScene.change_screen(POLICE_REPORTS_SCENE)
