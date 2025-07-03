@@ -63,56 +63,6 @@ text = "1979"
 layout_mode = 2
 text = "1980"
 
-[node name="ArticleSelection1970" type="VBoxContainer" parent="."]
-visible = false
-offset_left = 85.0
-offset_top = 4.0
-offset_right = 287.0
-offset_bottom = 140.0
-
-[node name="Stephany_Romy" type="Button" parent="ArticleSelection1970"]
-layout_mode = 2
-text = "Stephany Romy"
-
-[node name="Body_Ditch" type="Button" parent="ArticleSelection1970"]
-layout_mode = 2
-text = "Body in ditch"
-
-[node name="Button3" type="Button" parent="ArticleSelection1970"]
-layout_mode = 2
-text = "EXAMPLE"
-
-[node name="Button4" type="Button" parent="ArticleSelection1970"]
-layout_mode = 2
-text = "Example"
-
-[node name="ArticleSelection1971" type="VBoxContainer" parent="."]
-visible = false
-offset_left = 85.0
-offset_top = 4.0
-offset_right = 287.0
-offset_bottom = 140.0
-
-[node name="Preteen_Molested" type="Button" parent="ArticleSelection1971"]
-layout_mode = 2
-text = "Preteen molested"
-
-[node name="Button" type="Button" parent="ArticleSelection1971"]
-layout_mode = 2
-text = "Text"
-
-[node name="Button2" type="Button" parent="ArticleSelection1971"]
-layout_mode = 2
-text = "Text"
-
-[node name="Button3" type="Button" parent="ArticleSelection1971"]
-layout_mode = 2
-text = "Text"
-
-[node name="Button4" type="Button" parent="ArticleSelection1971"]
-layout_mode = 2
-text = "Text"
-
 [node name="DisplayedNewspaper" type="Node2D" parent="."]
 position = Vector2(44, 0)
 
@@ -157,9 +107,12 @@ texture_normal = ExtResource("3_2spfm")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="ArticleSelection" type="VBoxContainer" parent="."]
+offset_left = 85.0
+offset_top = 8.0
+offset_right = 125.0
+offset_bottom = 48.0
+
 [connection signal="pressed" from="YearSelection/1970" to="." method="_on_1970_pressed"]
 [connection signal="pressed" from="YearSelection/1971" to="." method="_on_1971_pressed"]
-[connection signal="pressed" from="ArticleSelection1970/Stephany_Romy" to="." method="_on_stephany_romy_pressed"]
-[connection signal="pressed" from="ArticleSelection1970/Body_Ditch" to="." method="_on_body_ditch_pressed"]
-[connection signal="pressed" from="ArticleSelection1971/Preteen_Molested" to="." method="_on_preteen_molested_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

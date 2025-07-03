@@ -20,7 +20,7 @@ const ARTICLES = {
 		'body': "On June 21st, soon after the last doorbell before summer rang, two 12 year old girls were lured in the Canyon area to be raped and left for dead. Thankfully, Samantha Lovings managed to make a run and escape, being picked up miraculously by an off-duty ranger in the area.
 		
 		 While her classmate Janice Smith did not have the same luck, Samantha was able to confide to the police the identity of the killer; none other than their school teacher and Samantha's uncle, Mr. Roger David Lovings. The man is currently held by police for questioning.",
-		#'image_path': pass
+		'image_path': "res://Assets/Newspaper/sad_teen.jpg"
 	},
 	
 	}
