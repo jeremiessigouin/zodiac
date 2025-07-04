@@ -4,7 +4,7 @@
 
 [node name="LibraryHUB" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(577.5, 324)
-scale = Vector2(1.64063, 1.68229)
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1283.0
+offset_bottom = 721.0
 texture = ExtResource("1_02r1i")

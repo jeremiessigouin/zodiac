@@ -11,28 +11,43 @@ script = ExtResource("2_bo1nx")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
-offset_left = 322.0
-offset_top = 562.0
-offset_right = 418.0
-offset_bottom = 602.0
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -233.0
+offset_top = -40.0
+offset_right = 233.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 40
 
-[node name="NewspaperButton" type="Button" parent="CanvasLayer/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+
+[node name="NewspaperButton" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 text = "Newspaper"
 
-[node name="PoliceReportsButton" type="Button" parent="CanvasLayer/HBoxContainer"]
+[node name="PoliceReportsButton" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 text = "Police Reports"
 
-[node name="BoardButton" type="Button" parent="CanvasLayer/HBoxContainer"]
+[node name="BoardButton" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 text = "Board"
 
-[node name="Button" type="Button" parent="CanvasLayer/HBoxContainer"]
+[node name="Button" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 text = "Audio Tapes"
 
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/NewspaperButton" to="." method="_on_newspaper_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/PoliceReportsButton" to="." method="_on_police_reports_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/BoardButton" to="." method="_on_board_button_pressed"]
+[node name="EvidenceButton" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Evidence"
+
+[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/NewspaperButton" to="." method="_on_newspaper_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/PoliceReportsButton" to="." method="_on_police_reports_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/BoardButton" to="." method="_on_board_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/EvidenceButton" to="." method="_on_evidence_button_pressed"]

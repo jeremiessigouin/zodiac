@@ -5,24 +5,10 @@ extends Node2D
 @onready var evidence_description = $CanvasLayer/EvidenceDetailWindow/Panel/Description
 
 @onready var evidence_grid = $MarginContainer/EvidenceGrid
-var evidence_button_scene = preload("res://Scenes/Evidence/evidence_button.tscn")
+#var evidence_thumbnail_scene = preload("res://Scenes/Evidence/evidence_thumbnail.tscn")
 
 func _ready():
 	evidence_detail_window.hide()
-	#EvidenceManager.connect('evidence_unlocked', self, '_on_evidence_unlocked')
-	#
-	#
-#func _on_evidence_unlocked(evidence_id):
-	#var button = evidence_button_scene.intantiate()
-	#button.evidence_id = evidence_id
-	#button.texture_normal = preload("res://assets/evidence/%s.png" % id)
-	#button.connect("pressed", Callable(self, "_on_evidence_pressed").bind(id))
-	#evidence_grid.add_child(button)
-#
-#func _on_evidence_pressed(id):
-	#print("Evidence clicked:", id)
-	## Show evidence window, etc.
-	
 
 
 
