@@ -72,3 +72,4 @@ offset_bottom = 60.0
 text = "X"
 
 [connection signal="pressed" from="MarginContainer/EvidenceGrid/MissingWomen" to="." method="_on_missing_women_pressed"]
+[connection signal="pressed" from="CanvasLayer/EvidenceDetailWindow/Panel/CloseButton" to="." method="_on_close_button_pressed"]

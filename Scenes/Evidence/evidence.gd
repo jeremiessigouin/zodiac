@@ -11,6 +11,11 @@ func _ready():
 	evidence_detail_window.hide()
 
 
+func _unhandled_input(_event):
+	if Input.is_action_pressed("Escape"):
+		$CanvasLayer/EvidenceDetailWindow/Panel/CloseButton.emit_signal('pressed')
+
+
 
 #GATHERING THE INFORMATIONS FOR THE EVIDENCE
 
@@ -32,3 +37,7 @@ func _on_missing_women_pressed():
 	var evidence_id = "missing_women"
 	var evidence = EvidenceData.EVIDENCES.get(evidence_id)
 	set_evidence_data(evidence)
+
+
+func _on_close_button_pressed():
+	evidence_detail_window.hide()
