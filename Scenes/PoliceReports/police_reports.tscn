@@ -39,6 +39,18 @@ offset_bottom = 60.0
 visible = false
 layout_mode = 1
 
+[node name="CrimeScenesScreen" type="Control" parent="DisplayedScreen"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ArrestsScreen" type="Control" parent="DisplayedScreen"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
 [connection signal="pressed" from="DisplayedScreen/HomeScreen/HBoxContainer/CrimeScenesButton" to="DisplayedScreen" method="_on_crime_scenes_button_pressed"]
 [connection signal="pressed" from="DisplayedScreen/HomeScreen/HBoxContainer/ArrestsReportButton" to="DisplayedScreen" method="_on_arrests_report_button_pressed"]
 [connection signal="pressed" from="DisplayedScreen/HomeScreen/HBoxContainer/MissingsButton" to="DisplayedScreen" method="_on_missings_button_pressed"]
