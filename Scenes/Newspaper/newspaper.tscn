@@ -64,7 +64,6 @@ layout_mode = 2
 text = "1980"
 
 [node name="DisplayedNewspaper" type="Node2D" parent="."]
-position = Vector2(44, 0)
 
 [node name="Background" type="TextureRect" parent="DisplayedNewspaper"]
 offset_left = 258.0

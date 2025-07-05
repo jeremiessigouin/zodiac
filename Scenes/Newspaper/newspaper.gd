@@ -20,7 +20,7 @@ var articles_by_year = {
 func _ready():
 	for button in $YearSelection.get_children():
 		button.pressed.connect(_on_year_selected.bind(button.text))
-
+	$DisplayedNewspaper/Background.hide()
 
 func init_data(data: Dictionary):
 	if data.has("article"):
@@ -51,8 +51,7 @@ func _on_year_selected(year: String):
 
 func _on_article_selected(article_id: String):
 	var article = NewspaperArticleData.ARTICLES.get(article_id)
-	if article:
-		# Assuming you have these UI nodes in your scene:
-		headline_label.text = article.headline
-		body_text_label.text = article.body
-		article_image.texture = load(article.image_path)
+	$DisplayedNewspaper/Background.show()
+	headline_label.text = article.headline
+	body_text_label.text = article.body
+	article_image.texture = load(article.image_path)
