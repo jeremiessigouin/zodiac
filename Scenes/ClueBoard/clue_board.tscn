@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://dx7gtp6cspyxo" path="res://Scenes/ClueBoard/clue_board.gd" id="1_e5bxp"]
 [ext_resource type="Texture2D" uid="uid://cjbnb5q3sbbl5" path="res://Assets/ClueBoard/corkboard.jpg" id="1_iovmh"]
-[ext_resource type="PackedScene" uid="uid://du6dmjpnp2tcx" path="res://Drag tests Clueboard/object.tscn" id="2_n0tf7"]
-[ext_resource type="PackedScene" uid="uid://750t2vxjxxrr" path="res://Scenes/ClueBoard/droppablearea.tscn" id="3_e5bxp"]
 [ext_resource type="Script" uid="uid://esbe6arm13dy" path="res://Scenes/ClueBoard/camera_2d.gd" id="4_n0tf7"]
 [ext_resource type="Texture2D" uid="uid://mu5hhwp5k1e1" path="res://Assets/ClueBoard/VictimsThumbnails/Thumbnail_Stephany_Romy.png" id="6_xuebf"]
+[ext_resource type="Texture2D" uid="uid://coankx3yapayr" path="res://Assets/ClueBoard/SuspectsCards/Richard Lovings.jpg" id="7_plxoc"]
+[ext_resource type="Texture2D" uid="uid://c8sd7iu22318r" path="res://Assets/ClueBoard/SuspectsCards/sketch.jpg" id="7_t5iur"]
 
 [node name="ClueBoard" type="Node2D"]
 script = ExtResource("1_e5bxp")
@@ -14,29 +14,6 @@ script = ExtResource("1_e5bxp")
 texture = ExtResource("1_iovmh")
 
 [node name="CardsOnBoard" type="Node2D" parent="."]
-
-[node name="object" parent="CardsOnBoard" instance=ExtResource("2_n0tf7")]
-position = Vector2(776, 403)
-
-[node name="object2" parent="CardsOnBoard" instance=ExtResource("2_n0tf7")]
-position = Vector2(977, 158)
-
-[node name="object3" parent="CardsOnBoard" instance=ExtResource("2_n0tf7")]
-position = Vector2(706, 181)
-
-[node name="DroppableAreas" type="Node2D" parent="."]
-
-[node name="droppablearea" parent="DroppableAreas" instance=ExtResource("3_e5bxp")]
-visible = false
-position = Vector2(249, 546)
-
-[node name="droppablearea2" parent="DroppableAreas" instance=ExtResource("3_e5bxp")]
-visible = false
-position = Vector2(946, 527)
-
-[node name="droppablearea3" parent="DroppableAreas" instance=ExtResource("3_e5bxp")]
-visible = false
-position = Vector2(581, 509)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = -2500
@@ -58,56 +35,63 @@ offset_bottom = 74.0
 text = "Polaroids"
 
 [node name="PolaroidsList" type="PanelContainer" parent="HUD/Control"]
+visible = false
 layout_mode = 0
 offset_left = 95.0
 offset_right = 303.0
 offset_bottom = 295.0
 
-[node name="GridContainer" type="GridContainer" parent="HUD/Control/PolaroidsList"]
+[node name="VictimsContainer" type="GridContainer" parent="HUD/Control/PolaroidsList"]
 layout_mode = 2
 columns = 2
 
-[node name="StephanyRomy_Button" type="TextureButton" parent="HUD/Control/PolaroidsList/GridContainer"]
+[node name="StephanyRomy_Button" type="TextureButton" parent="HUD/Control/PolaroidsList/VictimsContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 texture_normal = ExtResource("6_xuebf")
 ignore_texture_size = true
 stretch_mode = 6
 
-[node name="TextureButton2" type="TextureButton" parent="HUD/Control/PolaroidsList/GridContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-texture_normal = ExtResource("6_xuebf")
-ignore_texture_size = true
-stretch_mode = 6
+[node name="SuspectsButton" type="Button" parent="HUD/Control"]
+layout_mode = 1
+anchors_preset = -1
+offset_top = 360.0
+offset_right = 93.0
+offset_bottom = 429.0
+grow_vertical = 2
+text = "Suspects"
 
-[node name="TextureButton3" type="TextureButton" parent="HUD/Control/PolaroidsList/GridContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-texture_normal = ExtResource("6_xuebf")
-ignore_texture_size = true
-stretch_mode = 6
+[node name="SuspectsPanel" type="PanelContainer" parent="HUD/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 92.0
+offset_top = 322.0
+offset_right = 311.0
+offset_bottom = 638.0
+grow_vertical = 0
 
-[node name="TextureButton4" type="TextureButton" parent="HUD/Control/PolaroidsList/GridContainer"]
-custom_minimum_size = Vector2(100, 100)
+[node name="SuspectsContainer" type="GridContainer" parent="HUD/Control/SuspectsPanel"]
 layout_mode = 2
-texture_normal = ExtResource("6_xuebf")
-ignore_texture_size = true
-stretch_mode = 6
+columns = 2
 
-[node name="TextureButton5" type="TextureButton" parent="HUD/Control/PolaroidsList/GridContainer"]
+[node name="Suspect1Button" type="TextureButton" parent="HUD/Control/SuspectsPanel/SuspectsContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-texture_normal = ExtResource("6_xuebf")
+texture_normal = ExtResource("7_t5iur")
 ignore_texture_size = true
-stretch_mode = 6
+stretch_mode = 4
 
-[node name="TextureButton6" type="TextureButton" parent="HUD/Control/PolaroidsList/GridContainer"]
+[node name="RichardLovingsButton2" type="TextureButton" parent="HUD/Control/SuspectsPanel/SuspectsContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-texture_normal = ExtResource("6_xuebf")
+texture_normal = ExtResource("7_plxoc")
 ignore_texture_size = true
-stretch_mode = 6
+stretch_mode = 4
 
 [connection signal="pressed" from="HUD/Control/PolaroidsButton" to="." method="_on_polaroids_button_pressed"]
-[connection signal="pressed" from="HUD/Control/PolaroidsList/GridContainer/StephanyRomy_Button" to="." method="_on_stephany_romy_button_pressed"]
+[connection signal="pressed" from="HUD/Control/PolaroidsList/VictimsContainer/StephanyRomy_Button" to="." method="_on_stephany_romy_button_pressed"]
+[connection signal="pressed" from="HUD/Control/SuspectsButton" to="." method="_on_suspects_button_pressed"]
+[connection signal="pressed" from="HUD/Control/SuspectsPanel/SuspectsContainer/Suspect1Button" to="." method="_on_suspect_1_button_pressed"]
+[connection signal="pressed" from="HUD/Control/SuspectsPanel/SuspectsContainer/RichardLovingsButton2" to="." method="_on_richard_lovings_button_2_pressed"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://du6dmjpnp2tcx"]
 
-[ext_resource type="Script" uid="uid://tkttni6g8m57" path="res://Scenes/ClueBoard/VictimCards/victim_card.gd" id="1_3xuqs"]
+[ext_resource type="Script" uid="uid://tkttni6g8m57" path="res://Scenes/card_template.gd" id="1_3xuqs"]
 [ext_resource type="Texture2D" uid="uid://b5apt7cr47747" path="res://icon.svg" id="2_0i3lm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dwaef"]

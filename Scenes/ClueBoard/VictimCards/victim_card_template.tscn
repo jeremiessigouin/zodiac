@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://dtryq13a8arut"]
 
-[ext_resource type="Script" uid="uid://tkttni6g8m57" path="res://Scenes/ClueBoard/VictimCards/victim_card.gd" id="1_1f0sn"]
-[ext_resource type="Texture2D" uid="uid://b5apt7cr47747" path="res://icon.svg" id="2_nakv0"]
+[ext_resource type="Script" uid="uid://tkttni6g8m57" path="res://Scenes/card_template.gd" id="1_21nw4"]
+[ext_resource type="Texture2D" uid="uid://b5apt7cr47747" path="res://icon.svg" id="2_pp2tr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dwaef"]
 size = Vector2(132, 152)
 
-[node name="VictimCard" type="Node2D"]
-script = ExtResource("1_1f0sn")
+[node name="VictimCardTemplate" type="Node2D"]
+script = ExtResource("1_21nw4")
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -22,17 +22,21 @@ offset_right = -34.0
 offset_bottom = 125.0
 scale = Vector2(4.38139, -3.43546)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -1)
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -64.0
+offset_top = -66.0
+offset_right = 64.0
+offset_bottom = 62.0
 scale = Vector2(1, 0.984375)
-texture = ExtResource("2_nakv0")
+texture = ExtResource("2_pp2tr")
 
 [node name="Label" type="Label" parent="."]
 offset_left = -60.0
 offset_top = 60.0
 offset_right = 62.0
 offset_bottom = 83.0
-text = "NAME"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "efeasf"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
