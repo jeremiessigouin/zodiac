@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://boflpshh8y0cw"]
+
+[ext_resource type="Script" uid="uid://doohqehog8rmy" path="res://Scenes/ClueBoard/Line/link_line.gd" id="1_4t3fx"]
+
+[node name="LinkLine" type="Line2D"]
+script = ExtResource("1_4t3fx")

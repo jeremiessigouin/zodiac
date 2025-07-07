@@ -90,6 +90,8 @@ texture_normal = ExtResource("7_plxoc")
 ignore_texture_size = true
 stretch_mode = 4
 
+[node name="Lines" type="Node2D" parent="."]
+
 [connection signal="pressed" from="HUD/Control/PolaroidsButton" to="." method="_on_polaroids_button_pressed"]
 [connection signal="pressed" from="HUD/Control/PolaroidsList/VictimsContainer/StephanyRomy_Button" to="." method="_on_stephany_romy_button_pressed"]
 [connection signal="pressed" from="HUD/Control/SuspectsButton" to="." method="_on_suspects_button_pressed"]

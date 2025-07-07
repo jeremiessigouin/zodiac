@@ -6,6 +6,9 @@ var body_ref
 var offset: Vector2
 var initialPos: Vector2
 
+signal right_clicked(card_node)
+
+
 
 func _process(_delta):
 	if draggable and not Global.screen_is_dragging:
@@ -18,21 +21,12 @@ func _process(_delta):
 		elif Input.is_action_just_released("Click"):
 			Global.card_is_dragging = false
 			
-			
-			#ENABLE THIS IF YOU WANT SNAPPING TO DROPPABLE AREAS
-			
-			#var tween = get_tree().create_tween()
-			#if is_inside_droppable:
-				#tween.tween_property(self, 'position', body_ref.position, 0.2).set_ease(Tween.EASE_OUT)
-			#else:
-				#tween.tween_property(self, 'global_position', initialPos, 0.2).set_ease(Tween.EASE_OUT)
+
 
 func _on_area_2d_mouse_entered():
 	if not Global.card_is_dragging:
 		draggable = true
 		scale = Vector2(1.05, 1.05)
-		print('mouse detected')
-
 
 func _on_area_2d_mouse_exited():
 	if not Global.card_is_dragging:
@@ -51,3 +45,8 @@ func _on_area_2d_body_exited(body):
 	if body.is_in_group('droppable'):
 		is_inside_droppable = false
 		body.modulate = Color(Color.MEDIUM_PURPLE, 0.7)
+
+
+func _on_area_2d_input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+		right_clicked.emit(self)
