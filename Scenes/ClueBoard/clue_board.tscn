@@ -34,18 +34,18 @@ offset_right = 95.0
 offset_bottom = 74.0
 text = "Polaroids"
 
-[node name="PolaroidsList" type="PanelContainer" parent="HUD/Control"]
+[node name="VictimsList" type="PanelContainer" parent="HUD/Control"]
 visible = false
 layout_mode = 0
 offset_left = 95.0
 offset_right = 303.0
 offset_bottom = 295.0
 
-[node name="VictimsContainer" type="GridContainer" parent="HUD/Control/PolaroidsList"]
+[node name="VictimsContainer" type="GridContainer" parent="HUD/Control/VictimsList"]
 layout_mode = 2
 columns = 2
 
-[node name="StephanyRomy_Button" type="TextureButton" parent="HUD/Control/PolaroidsList/VictimsContainer"]
+[node name="StephanyRomy_Button" type="TextureButton" parent="HUD/Control/VictimsList/VictimsContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 texture_normal = ExtResource("6_xuebf")
@@ -93,7 +93,7 @@ stretch_mode = 4
 [node name="Lines" type="Node2D" parent="."]
 
 [connection signal="pressed" from="HUD/Control/PolaroidsButton" to="." method="_on_polaroids_button_pressed"]
-[connection signal="pressed" from="HUD/Control/PolaroidsList/VictimsContainer/StephanyRomy_Button" to="." method="_on_stephany_romy_button_pressed"]
+[connection signal="pressed" from="HUD/Control/VictimsList/VictimsContainer/StephanyRomy_Button" to="." method="_on_stephany_romy_button_pressed"]
 [connection signal="pressed" from="HUD/Control/SuspectsButton" to="." method="_on_suspects_button_pressed"]
 [connection signal="pressed" from="HUD/Control/SuspectsPanel/SuspectsContainer/Suspect1Button" to="." method="_on_suspect_1_button_pressed"]
 [connection signal="pressed" from="HUD/Control/SuspectsPanel/SuspectsContainer/RichardLovingsButton2" to="." method="_on_richard_lovings_button_2_pressed"]

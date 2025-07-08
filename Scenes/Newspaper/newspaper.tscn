@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bjqyy13j6nj6w"]
+[gd_scene load_steps=6 format=3 uid="uid://bjqyy13j6nj6w"]
 
 [ext_resource type="Script" uid="uid://b15htf3fnsdoj" path="res://Scenes/Newspaper/newspaper.gd" id="1_72c1i"]
 [ext_resource type="Texture2D" uid="uid://cihd6j8gc6yuj" path="res://Assets/Newspaper/newspaper_BG.jpg" id="2_2spfm"]
 [ext_resource type="Texture2D" uid="uid://dd3x0c034h5jp" path="res://Assets/Newspaper/DeskPlaceHolder.webp" id="2_yfima"]
 [ext_resource type="Texture2D" uid="uid://bkb0moxfctemn" path="res://Assets/Newspaper/coffee.png" id="3_2spfm"]
+[ext_resource type="FontFile" uid="uid://c17l6r6mhgyi0" path="res://Assets/Newspaper/Font/times.ttf" id="4_yfima"]
 
 [node name="NewspaperScene" type="Node2D"]
 script = ExtResource("1_72c1i")
@@ -92,17 +93,21 @@ offset_top = 42.0
 offset_right = 995.0
 offset_bottom = 97.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_yfima")
 theme_override_font_sizes/font_size = 40
 horizontal_alignment = 1
 vertical_alignment = 1
+uppercase = true
 
 [node name="BodyText" type="RichTextLabel" parent="DisplayedNewspaper"]
 layout_mode = 2
-offset_left = 269.0
+offset_left = 277.0
 offset_top = 398.0
-offset_right = 1006.0
+offset_right = 1003.0
 offset_bottom = 708.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_yfima")
+horizontal_alignment = 3
 
 [node name="BackButton" type="TextureButton" parent="."]
 offset_left = 1058.0

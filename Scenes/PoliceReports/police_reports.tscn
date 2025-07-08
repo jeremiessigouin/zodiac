@@ -15,25 +15,22 @@ scale = Vector2(0.55, 0.55)
 texture = ExtResource("2_3bijo")
 
 [node name="DisplayedScreen" type="Control" parent="."]
+custom_minimum_size = Vector2(1280, 720)
 layout_mode = 3
 anchors_preset = 0
+offset_left = 264.0
+offset_top = 60.0
+offset_right = 1544.0
+offset_bottom = 780.0
 size_flags_horizontal = 0
 script = ExtResource("4_xcwa8")
 metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="DisplayedScreen"]
-layout_mode = 0
-offset_left = 267.0
-offset_top = 57.0
-offset_right = 950.0
-offset_bottom = 558.0
+layout_mode = 1
+offset_right = 685.0
+offset_bottom = 505.0
 color = Color(0.396889, 0.396889, 0.396889, 1)
-
-[node name="HomeScreen" parent="DisplayedScreen" instance=ExtResource("2_xcwa8")]
-offset_left = -10.0
-offset_top = 20.0
-offset_right = 30.0
-offset_bottom = 60.0
 
 [node name="MissingPersonsScreen" parent="DisplayedScreen" instance=ExtResource("5_rwtrp")]
 visible = false
@@ -51,9 +48,13 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="HomeScreen" parent="DisplayedScreen" instance=ExtResource("2_xcwa8")]
+layout_mode = 1
+
 [connection signal="pressed" from="DisplayedScreen/HomeScreen/HBoxContainer/CrimeScenesButton" to="DisplayedScreen" method="_on_crime_scenes_button_pressed"]
 [connection signal="pressed" from="DisplayedScreen/HomeScreen/HBoxContainer/ArrestsReportButton" to="DisplayedScreen" method="_on_arrests_report_button_pressed"]
 [connection signal="pressed" from="DisplayedScreen/HomeScreen/HBoxContainer/MissingsButton" to="DisplayedScreen" method="_on_missings_button_pressed"]
 [connection signal="pressed" from="DisplayedScreen/HomeScreen/SearchButton" to="DisplayedScreen" method="_on_search_button_pressed"]
 
+[editable path="DisplayedScreen/MissingPersonsScreen"]
 [editable path="DisplayedScreen/HomeScreen"]

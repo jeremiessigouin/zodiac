@@ -21,6 +21,7 @@ NewspaperArticleData="*res://Dictionary/newspaper_article_data.gd"
 Global="*res://Scenes/global.gd"
 EvidenceManager="*res://Scripts/Globals/evidence_manager.gd"
 EvidenceData="*res://Dictionary/evidence_data.gd"
+ClueboardData="*res://Scripts/Globals/clueboard_data.gd"
 
 [display]
 

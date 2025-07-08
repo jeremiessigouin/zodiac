@@ -1,5 +1,8 @@
 extends Node2D
 
+@export var card_id: String
+@export var scene_path: String
+
 var draggable = false
 var is_inside_droppable = false
 var body_ref

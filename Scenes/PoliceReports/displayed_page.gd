@@ -59,6 +59,7 @@ func _on_search_button_pressed():
 		if $HomeScreen/LineEdit.text == 'Jane Doe':
 			$HomeScreen.hide()
 			$MissingPersonsScreen.show()
+			$MissingPersonsScreen/TextureRect.texture = preload("res://Assets/Police Reports/Missing Persons Reports/Template.webp")
 			previous_page = $HomeScreen
 			current_page = $MissingPersonsScreen
 		else: 
@@ -66,8 +67,7 @@ func _on_search_button_pressed():
 			warning_text.text = 'No results found. Please type in name correctly.'
 	
 	
-	
-	
+
 	
 	else:
 		warning_text.modulate = Color.RED
