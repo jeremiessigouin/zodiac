@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://coankx3yapayr" path="res://Assets/ClueBoard/SuspectsCards/Richard Lovings.jpg" id="2_kmrw7"]
 
 [node name="RichardLovingsCard" instance=ExtResource("1_qrdgh")]
+card_id = "RichardLovings"
+card_type = "Suspect"
 
 [node name="TextureRect" parent="." index="2"]
 texture = ExtResource("2_kmrw7")

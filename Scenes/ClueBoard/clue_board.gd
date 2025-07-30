@@ -79,15 +79,19 @@ func _on_card_right_clicked(card):
 		current_line.add_point(card.global_position)
 		current_line.add_point(camera.get_global_mouse_position())
 		
-	else:
 		
+	else:
+		#Finish the line
 		current_line.card_b = card
 		current_line.set_point_position(1, card.global_position)
+		
+		#Check if the link is a valid pair
+		_check_link_validity(current_line.card_a, current_line.card_b)
 		
 		current_line = null
 		line_start_card = null
 		
-	
+
 
 
 func _add_card_to_board(card):
@@ -104,3 +108,30 @@ func collect_clueboard_data():
 			"position": card.global_position,
 			"scene_path": card.scene_path
 		})
+
+func _check_link_validity(card_a, card_b):
+	var id_a = card_a.card_id
+	var type_a = card_a.card_type
+	
+	var id_b = card_b.card_id
+	var type_b = card_b.card_type
+
+	# Ensure one suspect and one victim
+	if (type_a == "Suspect" and type_b == "Victim") or (type_a == "Victim" and type_b == "Suspect"):
+		var suspect_id: String
+		var victim_id: String
+		if type_a == "Suspect":
+			suspect_id = id_a
+			victim_id = id_b
+		else:
+			suspect_id = id_b
+			victim_id = id_a
+
+		# Compare against your correct pairings
+		if ClueboardData._is_correct_pair(suspect_id, victim_id):
+			print("win condition")
+		else:
+			print("incorrect match")
+	else:
+		print("Invalid link: must be between a suspect and a victim")
+		

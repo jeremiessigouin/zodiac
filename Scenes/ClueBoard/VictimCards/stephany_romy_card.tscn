@@ -4,8 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://c82jpn3qxtptb" path="res://Assets/Victims/StephanyRomy.jpg" id="2_600al"]
 
 [node name="StephanyRomyCard" instance=ExtResource("1_xn4ws")]
-card_id = "StephanyRomyCard"
+card_id = "StephanyRomy"
 scene_path = "res://Scenes/ClueBoard/VictimCards/stephany_romy_card.tscn"
+card_type = "Victim"
 
 [node name="TextureRect" parent="." index="2"]
 texture = ExtResource("2_600al")
