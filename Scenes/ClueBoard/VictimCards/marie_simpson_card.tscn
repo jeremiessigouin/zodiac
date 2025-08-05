@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cygodetnnrxxr"]
+
+[ext_resource type="PackedScene" uid="uid://dtryq13a8arut" path="res://Scenes/ClueBoard/VictimCards/victim_card_template.tscn" id="1_tk2dy"]
+[ext_resource type="Texture2D" uid="uid://blbtxmk7jvtr" path="res://Assets/ClueBoard/VictimsCards/Marie Simpson.jpg" id="2_0gr1u"]
+
+[node name="MarieSimpsonCard" instance=ExtResource("1_tk2dy")]
+card_id = "MarieSimpson"
+card_type = "Victim"
+
+[node name="TextureRect" parent="." index="2"]
+texture = ExtResource("2_0gr1u")
+expand_mode = 1
+
+[node name="Label" parent="." index="3"]
+text = "Marie Simpson"

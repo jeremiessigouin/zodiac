@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mu5hhwp5k1e1"
-path="res://.godot/imported/Thumbnail_Stephany_Romy.png-3787c35bc7863cb17111580b8acbee85.ctex"
+uid="uid://bw0n0niitq0mu"
+path="res://.godot/imported/John Gotti.jpg-f3c2c3f58453a5df087c823a0ecdb2a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ClueBoard/VictimsThumbnails/Thumbnail_Stephany_Romy.png"
-dest_files=["res://.godot/imported/Thumbnail_Stephany_Romy.png-3787c35bc7863cb17111580b8acbee85.ctex"]
+source_file="res://Assets/ClueBoard/SuspectsCards/John Gotti.jpg"
+dest_files=["res://.godot/imported/John Gotti.jpg-f3c2c3f58453a5df087c823a0ecdb2a3.ctex"]
 
 [params]
 

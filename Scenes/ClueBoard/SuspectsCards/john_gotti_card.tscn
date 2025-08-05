@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ciex1c8w2l5a"]
+
+[ext_resource type="PackedScene" uid="uid://cd6hhrdexbw2t" path="res://Scenes/ClueBoard/SuspectsCards/suspect_card_template.tscn" id="1_n2jet"]
+[ext_resource type="Texture2D" uid="uid://bw0n0niitq0mu" path="res://Assets/ClueBoard/SuspectsCards/John Gotti.jpg" id="2_2p8yh"]
+
+[node name="JohnGottiCard" instance=ExtResource("1_n2jet")]
+card_id = "JohnGotti"
+
+[node name="TextureRect" parent="." index="2"]
+texture = ExtResource("2_2p8yh")
+
+[node name="Label" parent="." index="3"]
+text = "John Gotti"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8sd7iu22318r"
-path="res://.godot/imported/sketch.jpg-6dd2b9419a371f04dff7a6a23cd7728c.ctex"
+uid="uid://c1che1dv1uc0r"
+path="res://.godot/imported/Police Officer.png-f75738c0ea168092bd27bf5ff2e71b7a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ClueBoard/SuspectsCards/sketch.jpg"
-dest_files=["res://.godot/imported/sketch.jpg-6dd2b9419a371f04dff7a6a23cd7728c.ctex"]
+source_file="res://Assets/DialogueScene/Characters/Police Officer.png"
+dest_files=["res://.godot/imported/Police Officer.png-f75738c0ea168092bd27bf5ff2e71b7a.ctex"]
 
 [params]
 

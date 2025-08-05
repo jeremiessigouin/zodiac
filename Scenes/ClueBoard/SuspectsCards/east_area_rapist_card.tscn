@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh1qwdmjrcrhj"]
+
+[ext_resource type="PackedScene" uid="uid://cd6hhrdexbw2t" path="res://Scenes/ClueBoard/SuspectsCards/suspect_card_template.tscn" id="1_su6uw"]
+[ext_resource type="Texture2D" uid="uid://c8sd7iu22318r" path="res://Assets/ClueBoard/SuspectsCards/East Area Rapist .jpg" id="2_urdmp"]
+
+[node name="EastAreaRapistCard" instance=ExtResource("1_su6uw")]
+card_id = "EastAreaRapist"
+
+[node name="TextureRect" parent="." index="2"]
+texture = ExtResource("2_urdmp")
+
+[node name="Label" parent="." index="3"]
+text = "East Area Rapist"

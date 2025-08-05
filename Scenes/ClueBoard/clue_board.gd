@@ -7,7 +7,7 @@ extends Node2D
 var current_line: Line2D = null
 var line_start_card: Node = null
 
-
+var can_finish_line: bool = false
 
 func _ready():
 	victims_list.hide()
@@ -53,12 +53,6 @@ func _on_suspects_button_pressed():
 		suspects_list.hide()
 
 
-func _on_suspect_1_button_pressed():
-	var card = preload("res://Scenes/ClueBoard/SuspectsCards/suspect_card_template.tscn").instantiate()
-	_add_card_to_board(card)
-	$HUD/Control/SuspectsPanel/SuspectsContainer/Suspect1Button.queue_free()
-	
-
 func _on_richard_lovings_button_2_pressed():
 	var card = preload("res://Scenes/ClueBoard/SuspectsCards/richard_lovings_card.tscn").instantiate()
 	_add_card_to_board(card)
@@ -81,6 +75,7 @@ func _on_card_right_clicked(card):
 		
 		
 	else:
+	
 		#Finish the line
 		current_line.card_b = card
 		current_line.set_point_position(1, card.global_position)
@@ -129,9 +124,40 @@ func _check_link_validity(card_a, card_b):
 
 		# Compare against your correct pairings
 		if ClueboardData._is_correct_pair(suspect_id, victim_id):
-			print("win condition")
+			ClueboardData.correct_indices.append(victim_id)
+			print(ClueboardData.correct_indices)
+			_check_correct_indices()
 		else:
 			print("incorrect match")
 	else:
 		print("Invalid link: must be between a suspect and a victim")
 		
+
+
+func _check_correct_indices():
+	if ClueboardData.correct_indices.size() == 3:
+			print("You won!")
+
+
+func _on_john_gotti_button_pressed():
+	var card = preload("res://Scenes/ClueBoard/SuspectsCards/john_gotti_card.tscn").instantiate()
+	_add_card_to_board(card)
+	$HUD/Control/SuspectsPanel/SuspectsContainer/JohnGottiButton.queue_free()
+
+
+func _on_marie_simpson_button_pressed():
+	var card = preload("res://Scenes/ClueBoard/VictimCards/marie_simpson_card.tscn").instantiate()
+	_add_card_to_board(card)
+	$HUD/Control/VictimsList/VictimsContainer/MarieSimpsonButton.queue_free()
+
+
+func _on_janice_smith_button_2_pressed():
+	var card = preload("res://Scenes/ClueBoard/VictimCards/janice_smith_card.tscn").instantiate()
+	_add_card_to_board(card)
+	$HUD/Control/VictimsList/VictimsContainer/JaniceSmithButton2.queue_free()
+
+
+func _on_east_area_rapist_button_pressed():
+	var card = preload("res://Scenes/ClueBoard/SuspectsCards/east_area_rapist_card.tscn").instantiate()
+	_add_card_to_board(card)
+	$HUD/Control/SuspectsPanel/SuspectsContainer/EastAreaRapistButton.queue_free()

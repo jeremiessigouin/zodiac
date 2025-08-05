@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ds3gf78gbbnmx"]
 
 [ext_resource type="PackedScene" uid="uid://dtryq13a8arut" path="res://Scenes/ClueBoard/VictimCards/victim_card_template.tscn" id="1_xn4ws"]
-[ext_resource type="Texture2D" uid="uid://c82jpn3qxtptb" path="res://Assets/Victims/StephanyRomy.jpg" id="2_600al"]
+[ext_resource type="Texture2D" uid="uid://c82jpn3qxtptb" path="res://Assets/ClueBoard/VictimsCards/StephanyRomy.jpg" id="2_600al"]
 
 [node name="StephanyRomyCard" instance=ExtResource("1_xn4ws")]
 card_id = "StephanyRomy"
@@ -10,7 +10,6 @@ card_type = "Victim"
 
 [node name="TextureRect" parent="." index="2"]
 texture = ExtResource("2_600al")
-expand_mode = 1
 
 [node name="Label" parent="." index="3"]
 offset_top = 59.0

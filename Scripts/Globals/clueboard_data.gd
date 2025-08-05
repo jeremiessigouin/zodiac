@@ -1,5 +1,18 @@
 extends Node
 
+
+var correct_indices: Array = []
+
+#func add_correct_index(index: int) -> void:
+	#if not correct_indices.has(index):
+		#correct_indices.append(index)
+		#print("Correct index added:", index)
+		#
+		#if correct_indices.size() == 3:
+			#print("You won!")
+
+
+
 var data := {
 		"cards": []
 	}
@@ -9,7 +22,9 @@ var data := {
 
 
 var correct_links = {
-	"RichardLovings" : "StephanyRomy"
+	"RichardLovings" : "JaniceSmith",
+	"JohnGotti" : "MarieSimpson",
+	"EastAreaRapist" : "StephanyRomy"
 }
 
 

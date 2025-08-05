@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c82jpn3qxtptb"
-path="res://.godot/imported/StephanyRomy.jpg-d4c69f0d70a665cc1c6b1716b99481cf.ctex"
+uid="uid://blbtxmk7jvtr"
+path="res://.godot/imported/Marie Simpson.jpg-6179488c5f2856bb52c16e98cc73a845.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Victims/StephanyRomy.jpg"
-dest_files=["res://.godot/imported/StephanyRomy.jpg-d4c69f0d70a665cc1c6b1716b99481cf.ctex"]
+source_file="res://Assets/ClueBoard/VictimsCards/Marie Simpson.jpg"
+dest_files=["res://.godot/imported/Marie Simpson.jpg-6179488c5f2856bb52c16e98cc73a845.ctex"]
 
 [params]
 

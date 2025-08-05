@@ -29,7 +29,7 @@ func zoom_camera(amount):
 
 func _input(event):
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT:
+		if event.button_index == MOUSE_BUTTON_RIGHT:
 			dragging = event.pressed
 			last_mouse_pos = event.position
 	elif event is InputEventMouseMotion and dragging and not Global.card_is_dragging:

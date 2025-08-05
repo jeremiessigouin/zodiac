@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d288ilwkkp4a7"]
+
+[ext_resource type="PackedScene" uid="uid://dtryq13a8arut" path="res://Scenes/ClueBoard/VictimCards/victim_card_template.tscn" id="1_wdcx6"]
+[ext_resource type="Texture2D" uid="uid://cyuf4khllilaq" path="res://Assets/ClueBoard/VictimsCards/JaniceSmith.jpg" id="2_kp88i"]
+
+[node name="JaniceSmithCard" instance=ExtResource("1_wdcx6")]
+card_id = "JaniceSmith"
+card_type = "Victim"
+
+[node name="TextureRect" parent="." index="2"]
+texture = ExtResource("2_kp88i")
+
+[node name="Label" parent="." index="3"]
+text = "Janice Smith"
