@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bplugw0aq6t53"]
 
-[ext_resource type="Script" uid="uid://bkmtsv8ddexe1" path="res://Scenes/main.gd" id="1_jjgbg"]
-[ext_resource type="Script" uid="uid://dx53odagkpxhp" path="res://Scenes/current_scene.gd" id="2_bo1nx"]
+[ext_resource type="Script" uid="uid://bkmtsv8ddexe1" path="res://Scenes/Main/main.gd" id="1_jjgbg"]
+[ext_resource type="Script" uid="uid://dx53odagkpxhp" path="res://Scenes/Main/current_scene.gd" id="2_bo1nx"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_jjgbg")
@@ -47,7 +47,15 @@ text = "Audio Tapes"
 layout_mode = 2
 text = "Evidence"
 
+[node name="dialogue_test" type="Button" parent="CanvasLayer"]
+offset_left = 79.0
+offset_top = 73.0
+offset_right = 368.0
+offset_bottom = 238.0
+text = "press to start Dialogue"
+
 [connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/NewspaperButton" to="." method="_on_newspaper_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/PoliceReportsButton" to="." method="_on_police_reports_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/BoardButton" to="." method="_on_board_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/EvidenceButton" to="." method="_on_evidence_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/dialogue_test" to="." method="_on_dialogue_test_pressed"]

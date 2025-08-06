@@ -51,6 +51,7 @@ offset_bottom = 40.0
 [node name="HomeScreen" parent="DisplayedScreen" instance=ExtResource("2_xcwa8")]
 layout_mode = 1
 
+[connection signal="pressed" from="DisplayedScreen/MissingPersonsScreen/PrintButton" to="." method="_on_print_button_pressed"]
 [connection signal="pressed" from="DisplayedScreen/HomeScreen/HBoxContainer/CrimeScenesButton" to="DisplayedScreen" method="_on_crime_scenes_button_pressed"]
 [connection signal="pressed" from="DisplayedScreen/HomeScreen/HBoxContainer/ArrestsReportButton" to="DisplayedScreen" method="_on_arrests_report_button_pressed"]
 [connection signal="pressed" from="DisplayedScreen/HomeScreen/HBoxContainer/MissingsButton" to="DisplayedScreen" method="_on_missings_button_pressed"]

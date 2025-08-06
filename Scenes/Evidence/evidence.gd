@@ -16,6 +16,11 @@ func _unhandled_input(_event):
 		$CanvasLayer/EvidenceDetailWindow/Panel/CloseButton.emit_signal('pressed')
 
 
+#ADD EVIDENCE
+
+func add_evidence():
+	pass
+
 
 #GATHERING THE INFORMATIONS FOR THE EVIDENCE
 

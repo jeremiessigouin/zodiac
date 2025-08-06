@@ -16,7 +16,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 expand_mode = 1
 
-[node name="Button" type="Button" parent="." index="2"]
+[node name="PrintButton" type="Button" parent="." index="2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 1
 anchors_preset = -1

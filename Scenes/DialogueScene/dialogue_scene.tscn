@@ -3,17 +3,10 @@
 [ext_resource type="Script" uid="uid://dfb7l260af4hm" path="res://Scenes/DialogueScene/dialogue_scene.gd" id="1_ytec4"]
 [ext_resource type="Texture2D" uid="uid://c1che1dv1uc0r" path="res://Assets/DialogueScene/Characters/Police Officer.png" id="2_5opaw"]
 
-[node name="DialogueScene" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="DialogueScene" type="Node2D"]
 script = ExtResource("1_ytec4")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
 offset_right = 1282.0
 offset_bottom = 719.0
 
@@ -22,27 +15,28 @@ position = Vector2(598, 361)
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("2_5opaw")
 
-[node name="DialogueBox" type="Panel" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogueBox" type="Panel" parent="CanvasLayer"]
 custom_minimum_size = Vector2(700, 200)
-layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -40.0
-offset_right = 20.0
+offset_left = -350.0
+offset_top = -200.0
+offset_right = 350.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="NameLabel" type="Label" parent="DialogueBox"]
+[node name="NameLabel" type="Label" parent="CanvasLayer/DialogueBox"]
 custom_minimum_size = Vector2(300, 40)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="DialogueText" type="RichTextLabel" parent="DialogueBox"]
+[node name="DialogueText" type="RichTextLabel" parent="CanvasLayer/DialogueBox"]
 custom_minimum_size = Vector2(700, 125)
 layout_mode = 1
 anchors_preset = 14
@@ -52,7 +46,7 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ClickIndicator" type="TextureRect" parent="DialogueBox"]
+[node name="ClickIndicator" type="TextureRect" parent="CanvasLayer/DialogueBox"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0

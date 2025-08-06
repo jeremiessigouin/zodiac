@@ -1,13 +1,15 @@
-extends Control
+extends Node2D
 
-@onready var dialogue_label: RichTextLabel = $DialogueBox/DialogueText
-@onready var name_label: Label = $DialogueBox/NameLabel
-@onready var click_indicator = $DialogueBox/ClickIndicator
+@onready var dialogue_label: RichTextLabel = $CanvasLayer/DialogueBox/DialogueText
+@onready var name_label: Label = $CanvasLayer/DialogueBox/NameLabel
+@onready var click_indicator = $CanvasLayer/DialogueBox/ClickIndicator
+
+var LIBRARY_HUB_SCENE = preload("res://Scenes/LibraryHUB/library_hub.tscn")
 
 var dialogues = [
-	{"name": "Mysterious Figure", "text": "Hello there... I've been expecting you."},
-	{"name": "Mysterious Figure", "text": "Do you have the artifact?"},
-	{"name": "Mysterious Figure", "text": "Very well. Let's begin..."}
+	{"name": "Officer Christensen", "text": "Hey... I was waiting for you. You okay? Ready for this?"},
+	{"name": "Officer Christensen", "text": "I tried to set you up a small place. Gave you access to everything you need."},
+	{"name": "Officer Christensen", "text": "I figure it's the least I can do... If there's ever anything... I'm just a phone call away."}
 ]
 
 var current_dialogue_index = 0
@@ -22,7 +24,7 @@ func _ready():
 func show_dialogue():
 	if current_dialogue_index >= dialogues.size():
 		# Dialogue is finished
-		queue_free()  # or emit signal / go to next scene
+		get_tree().change_scene_to_file("res://Scenes/main.tscn") # or emit signal / go to next scene
 		return
 
 	var entry = dialogues[current_dialogue_index]
