@@ -18,13 +18,6 @@ theme_override_constants/h_separation = 35
 theme_override_constants/v_separation = 50
 columns = 7
 
-[node name="MissingWomen" type="TextureButton" parent="MarginContainer/EvidenceGrid"]
-custom_minimum_size = Vector2(120, 120)
-layout_mode = 2
-texture_normal = ExtResource("1_crggu")
-ignore_texture_size = true
-stretch_mode = 0
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="EvidenceDetailWindow" type="Control" parent="CanvasLayer"]
@@ -71,5 +64,4 @@ offset_right = 591.0
 offset_bottom = 60.0
 text = "X"
 
-[connection signal="pressed" from="MarginContainer/EvidenceGrid/MissingWomen" to="." method="_on_missing_women_pressed"]
 [connection signal="pressed" from="CanvasLayer/EvidenceDetailWindow/Panel/CloseButton" to="." method="_on_close_button_pressed"]

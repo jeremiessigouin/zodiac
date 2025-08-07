@@ -5,5 +5,5 @@ func _ready():
 
 
 func _on_print_button_pressed():
-	EvidenceManager.unlock_evidence("Jane Doe Report")
+	EvidenceData.add_evidence("Jane Doe Report", "A missing person report for a Jane Doe.", "res://Assets/Police Reports/Missing Persons Reports/Missing Report Template.png")
 	

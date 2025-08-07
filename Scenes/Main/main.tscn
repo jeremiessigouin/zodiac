@@ -49,8 +49,8 @@ text = "Evidence"
 
 [node name="dialogue_test" type="Button" parent="CanvasLayer"]
 offset_left = 79.0
-offset_top = 73.0
-offset_right = 368.0
+offset_top = 158.0
+offset_right = 262.0
 offset_bottom = 238.0
 text = "press to start Dialogue"
 

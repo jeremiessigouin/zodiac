@@ -10,18 +10,19 @@
 script = ExtResource("1_ie4gt")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(610, 367)
-scale = Vector2(0.55, 0.55)
+position = Vector2(650, 433)
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_3bijo")
 
 [node name="DisplayedScreen" type="Control" parent="."]
 custom_minimum_size = Vector2(1280, 720)
 layout_mode = 3
 anchors_preset = 0
-offset_left = 264.0
-offset_top = 60.0
-offset_right = 1544.0
-offset_bottom = 780.0
+offset_left = 208.0
+offset_top = 25.0
+offset_right = 1488.0
+offset_bottom = 745.0
+scale = Vector2(1.3, 1.3)
 size_flags_horizontal = 0
 script = ExtResource("4_xcwa8")
 metadata/_edit_use_anchors_ = true
